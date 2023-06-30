@@ -4,7 +4,7 @@
 *
 *Description: the puts include the words
 *
-*return: 0 is correct
+*return: 0 is (correct)
 */
 
 int main(void)
