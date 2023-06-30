@@ -5,7 +5,7 @@
 *
 *Description: the puts include the words
 *
-*return: 0 (success)
+*Return 0 
 */
 
 int main(void)
