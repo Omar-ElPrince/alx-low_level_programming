@@ -1,10 +1,11 @@
 #include <stdio.h>
+
 /**
 *main - Entry point
 *
 *Description: the puts include the words
 *
-*return: 0 (correct)
+*return: 0 (success)
 */
 
 int main(void)
