@@ -1,51 +1,42 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ * main - compute and prints the sum of all the multiples
+ * of 3 or 5 below
+ * Return: always 0 (Success)
  *
- * Return: Always 0
+ * FUNCTIONALITY *
+ *
+ * 1. Declare variables
+ * 2. Initialize variables
+ * 3. Loop through numbers 0 to 1024
+ * 4. If the number is divisible by 3, add it to sum3
+ * 5. If the number is divisible by 5, add it to sum5
+ * 6. Add sum3 and sum5 together
+ * 7. Print the result
+ *
+ * Time Complexity: O(n)
  */
-
 int main(void)
 {
-	long int sum;
-	int start;
+	unsigned long int sum3, sum5, sum;
+	int i;
 
-	start = 0;
+	sum3 = 0;
+	sum5 = 0;
 	sum = 0;
-	while (start < 1024)
+
+	for (i = 0; i < 1024; ++i)
 	{
-		if (start % 3 == 0  || start % 5 == 0)
+		if ((i % 3) == 0)
 		{
-			sum = sum + start;
+			sum3 = sum3 + i;
 		}
-		start++;
-	}
-	printf("%li\n", sum);
-	return (0);
-}#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-
-int main(void)
-{
-	long int sum;
-	int start;
-
-	start = 0;
-	sum = 0;
-	while (start < 1024)
-	{
-		if (start % 3 == 0  || start % 5 == 0)
+		else if ((i % 5) == 0)
 		{
-			sum = sum + start;
+			sum5 = sum5 + i;
 		}
-		start++;
 	}
-	printf("%li\n", sum);
+	sum = sum3 + sum5;
+	printf("%lu\n", sum);
 	return (0);
 }
